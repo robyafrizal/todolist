@@ -8,7 +8,7 @@ class List extends Component {
     return (
       <ul className="list-group">
         {this.props.todos.map((todo, index) => (
-          <li key={index} className="list-group-item">
+          <li key={index} className="list-group-item" style={{ color: "red" }}>
             <TextAndForm todo={todo} index={index} />
           </li>
         ))}

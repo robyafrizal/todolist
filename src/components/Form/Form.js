@@ -30,7 +30,8 @@ class Form extends Component {
             onChange={this.onChangeHandler}
             type="text"
             className="form-control"
-            placeholder="Type todo here"
+            placeholder="Enter To Do List"
+            style={{ color: "brown", fontWeight: "600" }}
           />
         </div>
         <button onClick={this.onSubmit} className="btn btn-primary">
