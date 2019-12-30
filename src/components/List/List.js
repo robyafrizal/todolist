@@ -1,16 +1,26 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import { connect } from "react-redux";
+
+import TextAndForm from "./TextAndForm";
 
 class List extends Component {
-
-  render (){
+  render() {
     return (
       <ul className="list-group">
-        {this.props.todos.map(todo => (
-          <li className="list-group-item">{todo}</li>
+        {this.props.todos.map((todo, index) => (
+          <li key={index} className="list-group-item">
+            <TextAndForm todo={todo} index={index} />
+          </li>
         ))}
       </ul>
-    )    
+    );
   }
 }
 
-export default List
+const mapStateToProps = state => {
+  return {
+    todos: state.todos
+  };
+};
+
+export default connect(mapStateToProps, null)(List);
