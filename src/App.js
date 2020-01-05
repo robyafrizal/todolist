@@ -5,6 +5,7 @@ import "semantic-ui-css/semantic.min.css";
 import "./App.css";
 import Form from "./components/Form/Form";
 import List from "./components/List/List";
+import NotesList from "./components/NotesList/NotesList";
 import { Provider } from "react-redux";
 import store from "./store";
 
@@ -26,10 +27,9 @@ class App extends Component {
               <Header inverted as="h1">
                 Learn React Redux
               </Header>
-              <p>Redux within application To Do List</p>
-              <br />
               <Form />
               <List />
+              <NotesList />
             </Container>
             <Segment inverted vertical as="footer">
               built with passion - by{" "}

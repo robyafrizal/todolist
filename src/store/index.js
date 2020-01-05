@@ -3,7 +3,8 @@ import { createStore } from "redux";
 import * as actionTypes from "./actions/actionTypes";
 
 const initialState = {
-  todos: []
+  todos: [],
+  notes: []
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -34,6 +35,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         todos
+      };
+    case actionTypes.ADD_NOTE:
+      return {
+        ...state,
+        notes: [...state.notes, action.payload]
       };
     default:
       return state;
